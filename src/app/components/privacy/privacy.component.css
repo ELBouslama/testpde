@@ -1,0 +1,30 @@
+h3 {
+  font-weight: bold;
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+p {
+  margin: 0 0 30px;
+  font-size: 16px;
+  text-align: justify;
+}
+
+#privacy {
+  padding: 80px 80px;
+  text-align: center;
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: #616d7b;
+  width: 100%;
+}
+@media screen and (max-width: 809px) {
+  #privacy {
+    padding: 40px 40px;
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 809px) {
+  .resp {
+    padding: 20px 40px;
+  }
+}

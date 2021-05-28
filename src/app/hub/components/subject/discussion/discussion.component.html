@@ -1,0 +1,11 @@
+<div *ngIf="discussion">
+    <app-generic-hub 
+        [header]=discussion.title
+        [span]=discussion.description
+        [isDiscussion]=true 
+        [discussion_id]=discussion_id
+    ></app-generic-hub>
+</div>
+<div *ngIf="!discussion">
+    Loading...
+</div>

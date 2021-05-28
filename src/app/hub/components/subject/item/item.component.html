@@ -1,0 +1,35 @@
+<div class="forum-item active" *ngFor="let item of items">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="forum-icon">
+                <i class="{{item.icon}}"></i>
+            </div>
+            <a routerLink="discussion/{{item.id}}" class="forum-item-title">{{item.title}}</a>
+            <div class="forum-sub-title">{{item.description}}</div>
+        </div>
+        <div class="col-md-1 forum-info">
+            <span class="views-number">
+                990
+            </span>
+            <div>
+                <small>Views</small>
+            </div>
+        </div>
+        <div class="col-md-1 forum-info">
+            <span class="views-number">
+                368
+            </span>
+            <div>
+                <small>Topics</small>
+            </div>
+        </div>
+        <div class="col-md-1 forum-info">
+            <span class="views-number">
+                140
+            </span>
+            <div>
+                <small>Posts</small>
+            </div>
+        </div>
+    </div>
+</div>

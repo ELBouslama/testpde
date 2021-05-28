@@ -1,0 +1,71 @@
+<div class="uk-container" style="padding-top: 5%">
+  <div class="uk-width-1-3@m m-auto my-16">
+    <div class="mb-4">
+      <img src="../../../assets/images/logo.svg" alt="" style="padding-right: 5%;">
+      <h2 class="mb-0" style="font-size: 26px;">Welcome <span class="uk-text-bold">back</span></h2>
+      <p class="my-0">Login to manage your account.</p>
+    </div>
+    <form #loginForm="ngForm">
+      <div class="uk-form-group mb-0">
+        <label class="uk-form-label"> Email</label>
+
+        <div class="uk-inline w-full">
+          <span class="uk-form-icon mb-4">
+            <i class="uil-envelope"></i>
+          </span>
+          <input
+            email
+            type="email"
+            class="uk-input"
+            ngModel
+            name="email"
+            required
+            placeholder="name@example.com"
+            #emailInput="ngModel"
+          />
+        </div>
+        <div
+          *ngIf="emailInput.invalid && emailInput.dirty"
+          class="alert alert-danger"
+        >
+          L'email est obligatoire et il doit etre valide
+        </div>
+      </div>
+
+      <div class="uk-form-group mb-0">
+        <label class="uk-form-label"> Password</label>
+
+        <div class="uk-inline w-full">
+          <span class="uk-form-icon mb-4">
+            <i class="uil-lock"></i>
+          </span>
+          <input
+            type="password"
+            minlength="4"
+            class="uk-input"
+            name="password"
+            placeholder="********"
+            ngModel
+            required
+            #pwdInput="ngModel"
+          />
+        </div>
+      </div>
+
+      <div class="uk-flex-middle" uk-grid>
+        <div class="uk-width-expand@s">
+          <p>Don't have account <a routerLink="/signup">Sign up</a></p>
+        </div>
+        <div class="uk-width-auto@s">
+            <button
+            (click)="login(loginForm)"
+            [disabled]="loginForm.invalid"
+            class="btn btn-success"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

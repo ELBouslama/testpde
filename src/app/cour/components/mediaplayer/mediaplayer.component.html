@@ -1,0 +1,28 @@
+<!-- <div
+  mat-card-image
+  plyr
+  plyrTitle="Custom video"
+  [plyrPlaysInline]="true"
+  [plyrCrossOrigin]="true"
+  [plyrPoster]="poster"
+  [plyrSources]="videoSources"
+  [plyrTracks]="tracks"
+  (plyrInit)="player = $event"
+  (plyrPlay)="played($event)"
+  (plyrEnded)="Ended($event)"
+></div>
+ -->
+<div
+  mat-card-image
+  plyr
+  [plyrPlaysInline]="true"
+  [plyrCrossOrigin]="true"
+  [plyrDriver]="hlsjsDriver2"
+  [plyrOptions]="options"
+  [plyrSources]="videoSources"
+  [plyrPoster]="poster"
+  (plyrInit)="plyr2 = $event"
+  (plyrPlay)="played()"
+  (plyrEnded)="Ended($event)"
+  (plyrLanguageChange)="languageChanged(hlsjsDriver2, plyr2)"
+></div>

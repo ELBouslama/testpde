@@ -1,0 +1,22 @@
+<h3>Rich Text Editor</h3>
+<h4>1. Standalone</h4>
+<rich-text-editor></rich-text-editor>
+<div class="mb-4"></div>
+
+<h4>2. Inside a Form</h4>
+<form [formGroup]="richTextForm">
+	<div class="form-group">
+		<label for="Title">Title</label>
+		<input formControlName="title" class="form-control" id="Title" aria-describedby="Title">
+	</div>
+	<div class="form-group">
+		<label>Description</label>
+		<rich-text-editor [control]="descriptionRichControl"></rich-text-editor>
+	</div>
+	
+</form>
+<button type="button" class="btn btn-primary" (click)="Onsubmit()">Confirmer</button>
+<div class="alert alert-info">
+	{{ richTextForm.value | json }}
+</div>
+

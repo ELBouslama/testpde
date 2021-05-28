@@ -1,0 +1,5 @@
+<div *ngFor="let subject of subjects" class="forum-title">
+    <app-subject-title [title]=subject.title></app-subject-title>
+
+    <app-item [subjectID]=subject.id></app-item>
+</div>

@@ -1,0 +1,186 @@
+<div
+  class="py-16 bg-center bg-cover bg-no-repeat"
+  data-src="assets/images/course/course-bg.png"
+  style="
+    background-blend-mode: color-burn;
+    background-color: rgb(23 23 23 / 25%);
+  "
+  uk-img
+>
+  <div class="uk-container">
+    <div class="lg:w-8/12 text-white">
+      <h5 class="text-white">PARODONTOLOGIE</h5>
+      <h1 class="lg:leading-10 lg:text-4xl text-white text-2xl leading-8">
+        La Nouvelle Classification des maladies parodontales
+      </h1>
+      <p class="lg:text-lg">
+        Maitriser l’enjeu de la nouvelle classification des pathologies et
+        conditions parodontales et péri-implantaires.
+      </p>
+
+      <ul class="flex text-gray-300 gap-4">
+        <li class="flex items-center">
+          <span class="avg bg-teal-400 mr-2 px-2 rounded text-white font-bold">
+            4.9
+          </span>
+          <div class="star-rating">
+            <span class="star"></span><span class="star"></span>
+            <span class="star"></span><span class="star"> </span
+            ><span class="star"></span>
+          </div>
+        </li>
+        <li><i class="icon-feather-users"></i> 75 inscrits</li>
+      </ul>
+      <ul class="flex text-gray-300">
+        <li>
+          Assuré par
+          <a href="#" class="text-white fond-bold"> Bouslama Afif </a>
+        </li>
+        <span class="middot mx-3 text-2xl">·</span>
+        <li>Dernier mise à jour 11/2020</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row container mx-auto pt-8">
+  <div class="col-md-8">
+    <div style="max-width: 1500px">
+      <app-mediaplayer (incrementInedxOnVideoEnd)="listenForVideoEnd($event)"  [currentVideo]="getCurrentVideo()" [indexVideo]="getCurrentVideoIndex()"> </app-mediaplayer>
+
+      <div class="border-t w-full">
+        <div class="uk-container px-4 py-2">
+          <div class="flex justify-between items-center">
+            <ul
+              class="uk-tab -mb-2"
+              uk-scrollspy-nav="closest: li; scroll: true"
+            >
+              <li class="active">
+                <a href="#Overview" uk-scroll class="text-grey-800">Overview</a>
+              </li>
+              <li><a href="#curriculum" uk-scroll>Curriculum</a></li>
+              <li><a href="#faq" uk-scroll>FAQ</a></li>
+              <li><a href="#announcement">Announcement</a></li>
+              <li><a href="#reviews">Reviews</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </div>
+  </div>
+
+  <div class="col-md-4" style="padding: 0px 0px">
+    <ul uk-accordion>
+      <li class="bg-white px-6 py-4 rounded shadow hover:shadow-md uk-open">
+        <a class="uk-accordion-title text-md" href="#">
+          Introduction et généralité
+        </a>
+        <div class="uk-accordion-content mt-3 -mx-6 ">
+          <ul class="course-curriculum-list font-semibold">
+            <li
+              *ngFor="let videos of videoParts; let i = index"
+              [ngClass]="{'selected': currentVideoIndex == i}"
+              (click)="selectVideoPlay(i)"
+              class="hover:bg-gray-200 px-6 py-2 flex"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-6 mr-2"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <p>{{ videos.title}}</p>
+
+              <span class="text-sm ml-auto">{{ videos.duration}}</span>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <div class="row container mx-auto pt-8">
+    <div class="col-md-8">
+      <div class="lg:mt-0 mt-6 pb-16">
+        <div class="uk-container">
+          <div class="flex gap-24">
+            <!-- course description -->
+            <div class="space-y-6">
+              <div>
+                <h3 style="font-weight: bold" class="text-grey-700">
+                  Description :
+                </h3>
+                <p style="text-align: justify">
+                  Cette formation permet à nos praticiens de bien maitriser
+                  l’enjeu de la nouvelle classification des pathologies et
+                  conditions parodontales et péri-implantaires afin de
+                  diagnostiquer et traiter correctement nos patients mais aussi
+                  à nos nouveaux chercheurs scientifiques d’étudier l’étiologie,
+                  la pathogénèse, l’histoire naturelle et le traitement des
+                  pathologies et conditions.<br />
+                  <br />
+                </p>
+                <hr />
+              </div>
+              <div>
+                <h3 style="font-weight: bold" class="text-grey-800">
+                  Vous apprendrez à :
+                </h3>
+                <br />
+                <ul class="grid md:grid-cols-2">
+                  <li>
+                    <i class="uil-check text-xl font-bold mr-2"></i>Conduire un
+                    bon examen clinique
+                  </li>
+                  <li>
+                    <i class="uil-check text-xl font-bold mr-2"></i>Poser le bon
+                    diagnostic
+                  </li>
+                  <li>
+                    <i class="uil-check text-xl font-bold mr-2"></i>Planifier la
+                    prise en charge thérapeutique
+                  </li>
+                  <li>
+                    <i class="uil-check text-xl font-bold mr-2"></i>Faciliter la
+                    communication entre les praticiens
+                  </li>
+                  <li>
+                    <i class="uil-check text-xl font-bold mr-2"></i>Instaurer la
+                    prise en charge multidisciplinaire
+                  </li>
+                </ul>
+                <br />
+                <hr />
+              </div>
+              <div>
+                <h3 style="font-weight: bold" class="text-grey-800">
+                  Requirements
+                </h3>
+                <br />
+                <ul class="list-disc ml-5">
+                  <li>
+                    N'importe quel ordinateur sous Windows, macOS ou Linux
+                  </li>
+                  <li>
+                    Classification des maladies parodontales Armitage AAP 1999
+                  </li>
+                  <li>examen clinique en parodontologie</li>
+                </ul>
+                <br />
+                <hr />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
